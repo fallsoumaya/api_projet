@@ -6,6 +6,7 @@ from flask import Flask, jsonify,request
 def create_app():
 
     #Creating the Flask App: 
+
     app=Flask(__name__)
     app.config.from_object(Config)
     
@@ -13,9 +14,13 @@ def create_app():
     api.init_app(app)
     jwt.init_app(app)
 
-    """
-
     #Database Initialization
+
+    from . import connexion
+    connexion.init_app(app)
+    
+
+    """
 
     #Blueprint Registration: 
 
@@ -23,14 +28,3 @@ def create_app():
 
     """
 return app
-
-
-
-
-
-
-
-
-
-
-
