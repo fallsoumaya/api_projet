@@ -1,5 +1,5 @@
-from .extensions import api, jwt
-from .config import Config
+from extensions import api, jwt
+from config import Config
 from flask import Flask, jsonify,request
 
 
@@ -10,7 +10,7 @@ def create_app():
     app=Flask(__name__)
     app.config.from_object(Config)
     
-    #Initializing Extensions: 
+    #Initializing Extensions:
     api.init_app(app)
     jwt.init_app(app)
 
@@ -27,4 +27,4 @@ def create_app():
     #JWT Error Handlers
 
     """
-return app
+    return app
