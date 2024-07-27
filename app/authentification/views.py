@@ -4,7 +4,7 @@ from flask import jsonify, request
 from flask_smorest import abort # pour lever les erreurs http
 from app.messages import Message
 from app.connexion import get_db, validate_password
-from .schema import UserSchema, LoginShema
+from app.classes import UserSchema, LoginShema # J'ai changé class en classes parce que class est un keyword 
 from werkzeug.security import check_password_hash, generate_password_hash
 from flask_jwt_extended import create_access_token, create_refresh_token, decode_token
 from flask_jwt_extended import jwt_required, get_jwt_identity, get_jwt

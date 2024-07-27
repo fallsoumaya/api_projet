@@ -1,0 +1,13 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 500,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "Sou's connexion",
+            "database": "prompts",
+            "username": "soumaya"
+        }
+    ]
+}

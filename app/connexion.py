@@ -86,7 +86,7 @@ def get_db():
             password="root",
             host="localhost",
             port="5432",
-            dbname="prompts")
+            dbname="prompts2.0")
     return g.db
 
 def close_db(e=None):
